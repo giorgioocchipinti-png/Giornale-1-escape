@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scoperta incredibile</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid black;
+}
+
+/* CONTENUTO */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 15px;
+}
+
+/* IMMAGINE */
+.article-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* LIGHTBOX */
+#lightbox {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Scoperta incredibile!</h1>
+</header>
+
+<div class="container">
+
+    <img src="imm.png" class="article-img" onclick="openImg(this)">
+
+    <p>
+        Una scoperta sensazionale ha sorpreso il mondo scientifico...
+    </p>
+
+    <p>
+        Secondo gli esperti, questa scoperta cambierà il futuro.
+    </p>
+
+    <nav>
+        <a href="index.html">← Torna alla home</a>
+    </nav>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeImg()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openImg(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeImg() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
