@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Mio Giornale</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f4f1ea;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid black;
+    background: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 5px;
+    color: gray;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #222;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* CONTENUTO */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+}
+
+/* ARTICOLO PRINCIPALE */
+.hero {
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.hero h2 {
+    margin: 10px 0;
+}
+
+/* GRIGLIA ARTICOLI */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>IL GIORNALE DEL GIORNO</h1>
+    <p>Notizie fresche dal mondo</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="articolo1.html">Scienza</a>
+    <a href="articolo2.html">Economia</a>
+</nav>
+
+<div class="container">
+
+    <!-- ARTICOLO PRINCIPALE -->
+    <div class="hero">
+        <a href="articolo1.html">
+            <img src="imm.png">
+            <h2>Scoperta incredibile!</h2>
+        </a>
+    </div>
+
+    <!-- ALTRI ARTICOLI -->
+    <div class="grid">
+        <div class="card">
+            <a href="articolo2.html">
+                <img src="imm.png">
+                Economia in crescita
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="articolo1.html">
+                <img src="imm.png">
+                Nuove tecnologie rivoluzionarie
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
